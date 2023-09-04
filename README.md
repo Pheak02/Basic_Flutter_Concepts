@@ -6,3 +6,4 @@
     - ```Scaffold()```
     - ```Center()```
     - Can have widget trees - nested widget
+- ```MaterialApp()```: provide the shell
