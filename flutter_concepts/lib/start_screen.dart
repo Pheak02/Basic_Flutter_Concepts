@@ -8,12 +8,10 @@ class StartScreen extends StatelessWidget {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Opacity(
-            opacity: 0.1,
-            child: Image.asset(
-              'assets/images/quiz-logo.png',
-              width: 300,
-            ),
+          Image.asset(
+            'assets/images/quiz-logo.png',
+            width: 300,
+            color:Color.fromARGB(82, 234, 225, 225),
           ),
           const SizedBox(
             height: 80,
@@ -21,7 +19,7 @@ class StartScreen extends StatelessWidget {
           const Text(
             'Learn Flutter @E2STEM HDSD!',
             style: TextStyle(
-              color: Color.fromARGB(255, 220, 197, 197),
+              color: Color.fromARGB(255, 238, 226, 226),
               fontSize: 24,
             ),
           ),
