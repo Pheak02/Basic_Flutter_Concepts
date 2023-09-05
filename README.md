@@ -7,3 +7,27 @@
     - ```Center()```
     - Can have widget trees - nested widget
 - ```MaterialApp()```: provide the shell
+- to display impage:
+    - refactor on ```pubspec.yaml``` file
+    - ```Image.asset('filePath', width: xxxpx)```
+- ```mainAxisSize``` to take only min space possible
+- ```SizedBox()``` only take the amount of space, we tell it to take
+- to get Transparency of widget: wrap widget with widget -> change to widget to opacity
+- form of StatefulWidget(): has 2 class, ```setState()``` & ```build()``` ```method```.
+- ```// do return some text widget  ```
+```import 'package:flutter/material.dart';```
+
+```class QuestionScreen extends StatefulWidget{```
+```  QuestionScreen({super.key});```
+```  @override```
+```  State<QuestionScreen> createState(){```
+```    return _QuestionScreenState();```
+  ``}``
+```}```
+`class _QuestionScreenState extends State<QuestionScreen>{`
+`  @override`
+ ` Widget build(BuildContext context) {`
+`    // TODO: implement build`
+```    throw UnimplementedError();```
+```  }```
+``}``
