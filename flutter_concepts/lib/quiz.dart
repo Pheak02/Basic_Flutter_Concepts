@@ -1,5 +1,7 @@
 // return material app
 import 'package:flutter/material.dart';
+import 'package:flutter_concepts/question_screen.dart';
+import 'package:flutter_concepts/start_screen.dart';
 
 class Quiz extends StatefulWidget{
   const Quiz({super.key});
@@ -10,6 +12,15 @@ class Quiz extends StatefulWidget{
   }
 }
 class _QuizState extends State<Quiz>{ //connect to quiz class
+
+  // var liftUpScreen = StartScreen();  //can store widgets in variables.
+  Widget liftUpScreen = const StartScreen();
+
+  void switchScreen(){
+    setState(() { //re-execute build method
+      liftUpScreen = const QuestionScreen();
+    });
+  }
 
 @override
 Widget build(context){
@@ -26,9 +37,9 @@ Widget build(context){
               end: Alignment.bottomRight,
             ),
           ),
-          child: const StartScreen(),
+          child: liftUpScreen,
         ),
       ),
-    ),
+    );
 }
 }
