@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class StartScreen extends StatelessWidget {
-  const StartScreen({super.key});
+  const StartScreen(this.startQuiz,
+      {super.key}); // startQuiz is a function that return a arg as a value
+final void Function() startQuiz;                        //so that can call to use in onPress()
   @override
   Widget build(context) {
     return Center(
@@ -11,7 +13,7 @@ class StartScreen extends StatelessWidget {
           Image.asset(
             'assets/images/quiz-logo.png',
             width: 300,
-            color:Color.fromARGB(82, 234, 225, 225),
+            color: Color.fromARGB(82, 234, 225, 225),
           ),
           const SizedBox(
             height: 80,
@@ -27,9 +29,7 @@ class StartScreen extends StatelessWidget {
             height: 30,
           ),
           OutlinedButton.icon(
-            onPressed: () {
-              //....
-            },
+            onPressed: startQuiz,
             style: OutlinedButton.styleFrom(
               foregroundColor: Colors.white,
             ),

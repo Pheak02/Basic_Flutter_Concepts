@@ -14,7 +14,8 @@ class Quiz extends StatefulWidget{
 class _QuizState extends State<Quiz>{ //connect to quiz class
 
   // var liftUpScreen = StartScreen();  //can store widgets in variables.
-  Widget liftUpScreen = const StartScreen();
+  Widget liftUpScreen = const StartScreen(switchScreen); //pass switchScreen as a value pointer of startScreen
+  // 
 
   void switchScreen(){
     setState(() { //re-execute build method
