@@ -17,6 +17,7 @@ class _QuizState extends State<Quiz>{ //connect to quiz class
   Widget liftUpScreen = const StartScreen(switchScreen); //pass switchScreen as a value pointer of startScreen
   /* switchScreen is happening simuteniously, 
   both var & method creation happens at the same point of time
+  *remember flutter code is parsed from top to bottom
   */
 
   void switchScreen(){
