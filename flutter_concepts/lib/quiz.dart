@@ -14,11 +14,12 @@ class Quiz extends StatefulWidget{
 class _QuizState extends State<Quiz>{ //connect to quiz class
 
   // var liftUpScreen = StartScreen();  //can store widgets in variables.
-  Widget liftUpScreen = const StartScreen(switchScreen); //pass switchScreen as a value pointer of startScreen
-  /* switchScreen is happening simuteniously, 
-  both var & method creation happens at the same point of time
-  *remember flutter code is parsed from top to bottom
-  */
+  Widget? liftUpScreen; //? tell Dart that var may contains a Widget OR null
+  @override
+  void initState() {
+    liftUpScreen = StartScreen(switchScreen);
+    super.initState();
+  }
 
   void switchScreen(){
     setState(() { //re-execute build method
