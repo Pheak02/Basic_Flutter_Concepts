@@ -1,6 +1,8 @@
 // do return some text widget
 import 'package:flutter/material.dart';
 
+import 'package:flutter_concepts/answer_button.dart';
+
 class QuestionScreen extends StatefulWidget {
   const QuestionScreen({super.key});
   @override
@@ -17,20 +19,18 @@ class _QuestionScreenState extends State<QuestionScreen> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const Text('the question....',),
+          const Text(
+            'the question....',
+            style: TextStyle(
+              color: Colors.white,
+            ),
+          ),
           const SizedBox(height: 30),
-          ElevatedButton(
-            onPressed: () {},
-            child: const Text('Answer1'),
-          ),
-           ElevatedButton(
-            onPressed: () {},
-            child: const Text('Answer2'),
-          ),
-           ElevatedButton(
-            onPressed: () {},
-            child: const Text('Answer3'),
-          ),
+          AnswerButton(answerText: 'answer text', onTap: (){}),
+          AnswerButton(answerText: 'answer text', onTap: (){}),
+          AnswerButton(answerText: 'answer text', onTap: (){}),
+
+
         ],
       ),
     );
