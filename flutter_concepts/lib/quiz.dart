@@ -20,7 +20,7 @@ class _QuizState extends State<Quiz> {
   void switchScreen() {
     setState(() {
       //re-execute build method
-      liftUpScreen == 'questions-screen';
+      liftUpScreen = 'questions-screen';
     });
   }
   
@@ -29,7 +29,7 @@ class _QuizState extends State<Quiz> {
   @override
   Widget build(context) {
     Widget screenWidget =  StartScreen(switchScreen);
-    if (liftUpScreen == 'question-screen'){
+    if (liftUpScreen == 'questions-screen'){
       screenWidget = const QuestionScreen();
 
     }
