@@ -3,33 +3,30 @@ import 'package:flutter/material.dart';
 import 'package:flutter_concepts/question_screen.dart';
 import 'package:flutter_concepts/start_screen.dart';
 
-class Quiz extends StatefulWidget{
+class Quiz extends StatefulWidget {
   const Quiz({super.key});
 
   @override
-  State<Quiz> createState(){  //return State<Quiz> widget class
+  State<Quiz> createState() {
+    //return State<Quiz> widget class
     return _QuizState();
   }
 }
-class _QuizState extends State<Quiz>{ //connect to quiz class
 
-  // var liftUpScreen = StartScreen();  //can store widgets in variables.
-  Widget? liftUpScreen; //? tell Dart that var may contains a Widget OR null
-  @override
-  void initState() {
-    liftUpScreen = StartScreen(switchScreen);
-    super.initState();
-  }
+class _QuizState extends State<Quiz> {
+  //connect to quiz class
+  var liftUpScreen = 'start-screen';
 
-  void switchScreen(){
-    setState(() { //re-execute build method
-      liftUpScreen = const QuestionScreen();
+  void switchScreen() {
+    setState(() {
+      //re-execute build method
+      liftUpScreen == 'questions-screen';
     });
   }
 
-@override
-Widget build(context){
-  return MaterialApp(
+  @override
+  Widget build(context) {
+    return MaterialApp(
       home: Scaffold(
         body: Container(
           decoration: const BoxDecoration(
@@ -42,9 +39,11 @@ Widget build(context){
               end: Alignment.bottomRight,
             ),
           ),
-          child: liftUpScreen,
+          child: liftUpScreen == 'start-screen' //condition yield true or false
+              ? StartScreen(switchScreen) //value used, if condition is met
+              : const QuestionScreen(), //value used, if condition is NOT met
         ),
       ),
     );
-}
+  }
 }
