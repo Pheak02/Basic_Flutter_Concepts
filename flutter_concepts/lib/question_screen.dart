@@ -33,7 +33,7 @@ class _QuestionScreenState extends State<QuestionScreen> {
             ),
             const SizedBox(height: 30),
             //convert list of string to list of widget by using map() which allow to transform a value in a list to other value
-            ...currentQuestion.answers.map((answerItem) {
+            ...currentQuestion.getSuffledAnswer().map((answerItem) {
               return AnswerButton(answerText: answerItem, onTap: (){});
             })
             /*... will added it as separate button in ,
