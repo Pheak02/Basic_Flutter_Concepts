@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class StartScreen extends StatelessWidget {
   const StartScreen(this.startQuiz,
@@ -13,15 +14,15 @@ final void Function() startQuiz;                        //so that can call to us
           Image.asset(
             'assets/images/quiz-logo.png',
             width: 300,
-            color: Color.fromARGB(82, 234, 225, 225),
+            color: const Color.fromARGB(82, 234, 225, 225),
           ),
           const SizedBox(
             height: 80,
           ),
-          const Text(
+          Text(
             'Learn Flutter @E2STEM HDSD!',
-            style: TextStyle(
-              color: Color.fromARGB(255, 238, 226, 226),
+            style: GoogleFonts.lato(
+              color: const Color.fromARGB(255, 238, 226, 226),
               fontSize: 24,
             ),
           ),
